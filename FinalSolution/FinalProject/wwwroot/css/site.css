@@ -1,0 +1,81 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #fc0000;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: rgb(111, 5, 5);
+}
+
+/*Home Page Styling*/
+#snorlax
+{
+  height: 400px;
+}
+
+h1
+{
+  text-align: center;
+  font-size: 70px;
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border: 3px solid black;
+}
+
+h4
+{
+  font-weight: bold;
+  padding: 10px;
+}
+
+.description
+{
+  font-size: 18px;
+  border: 3px solid black;
+  padding: 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  background-color: white;
+}
+
+#PokemonBuddyLink, #MenuPlannerLink
+{
+  justify-content: center;
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+  background-color: red;
+  font-size: 25px;
+  border: 2px solid black;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#PokemonBuddyLink:hover, #MenuPlannerLink:hover
+{
+  background-color: rgb(5, 103, 152);
+}
+
+#snorlaxAnimation
+{
+  border: 2px solid black;
+  border-radius: 1000px;
+  background-color: white;
+}

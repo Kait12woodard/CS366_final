@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container-fluid"><br>
+    <h1>Pokemon Menu Planner</h1><br>
+    <div class="description">
+        <p>Welcome to Pokémon Menu Planner, the ultimate platform where Pokémon enthusiasts can merge their love for
+            these captivating creatures with the art of meal planning! Embark on a unique journey with your Pokémon
+            companion, and delve into a world where nutrition meets adventure.</p><br>
+
+        <p>At Pokémon Menu Planner, we understand the bond between a Trainer and their Pokémon. That's why we've created
+            an innovative and interactive website that allows you to select a Pokémon companion from a curated list. Once
+            chosen, you'll have the opportunity to personalize your Pokémon's journey with us by providing essential details.
+            Give your Pokémon a nickname, and inform us about its weight, any allergies it may have, and other vital information.
+            Based on the details you provide, our system will analyze and provide feedback on your Pokémon's health status,
+            suggesting whether it's over or underweight. Moreover, we'll offer tailored advice on which foods your Pokémon would
+            relish or should avoid, considering its unique type and needs.</p><br>
+
+        <p>But that's not all – our menu planner feature takes this immersive experience to the next level. Here, you can
+            meticulously plan meals not just for yourself but for your Pokémon as well. Fill out a simple form indicating the date,
+            the Pokémon-themed meal you're eyeing, and whether it's for breakfast, lunch, or dinner. This personalized approach 
+            ensures that both you and your companion enjoy nutritious and delightful meals tailored to your preferences and dietary
+            requirements.</p><br>
+
+        <p>At Pokémon Menu Planner, we're committed to providing a platform that is both fun and educational, fostering a deeper
+            understanding and connection between Trainers and their Pokémon. Whether you're planning a meal for a water-type Pokémon
+            or figuring out the best snacks for your electric companion, we're here to guide you every step of the way. Join us on
+            this flavorful adventure and turn meal planning into an exciting quest with your Pokémon!</p><br>
+    </div>
+</div>
+
+<div class="container-fluid text-center">
+    <br><br>
+    <div class="row">
+        <div class="col-sm-6">
+            <a asp-controller="Buddy" asp-action="BuddyForm" id="PokemonBuddyLink">Pick a Pokemon Buddy!</a>
+        </div>
+        <div class="col-sm-6">
+            <a asp-controller="Menu" asp-action="MenuPlanner" id="MenuPlannerLink">Let's start Meal Planning!</a>
+        </div>
+    </div>
+    <br><br>
+</div>
+
+<div id="snorlaxAnimation" class="container-fluid text-center">
+    <h4>Poke the Snorlax to Wake him</h4>
+    <img id="snorlax" src="/Images/SnorlaxSleep.png" alt="Snorlax Sleeping">
+</div>
