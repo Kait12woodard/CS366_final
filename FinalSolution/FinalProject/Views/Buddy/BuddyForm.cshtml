@@ -1,0 +1,61 @@
+@{
+    ViewData["Title"] = "Buddy Form";
+}
+
+<div class="container-fluid text-center">
+    <h1>Pick Your Pokemon Buddy</h1>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <form class="row">
+            <div class="col-sm-6">
+                <div>
+                    <input type="checkbox" name="pokemon1" value="Mimiku">
+                    <label for="pokemon1">Mimikyu</label><br>
+                </div>
+                <div>
+                    <input type="checkbox" name="pokemon2" value="Eevee">
+                    <label for="pokemon2">Eevee</label><br>
+                </div>
+                <div>
+                    <input type="checkbox" name="pokemon3" value="Gengar">
+                    <label for="pokemon3">Gengar</label><br>
+                </div>
+                <div>
+                    <input type="checkbox" name="pokemon4" value="Charizard">
+                    <label for="pokemon4">Charizard</label><br>
+                </div>
+                <div>
+                    <input type="checkbox" name="pokemon5" value="Lapras">
+                    <label for="pokemon5">Lapras</label><br>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div>
+                    <label for="weight">Pokemon's weight (lbs):</label>
+                    <input type="number" name="weight" min="1"><br>
+                </div>
+                <div>
+                    <label for="allergies">Pokemon's Allergies</label>
+                    <select name="allergies">
+                        <option value="nuts">Nuts</option>
+                        <option value="berries">Berries</option>
+                        <option value="eggs">Eggs</option>
+                        <option value="gluten">Gluten</option>
+                        <option value="milk">Milk</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="fav-food">Favorite Food:</label>
+                    <input type="text" name="fav-food"><br>
+                </div>
+                <div>
+                    <label for="nickname">Nickname:</label>
+                    <input type="text" name="nickname"><br><br>
+                </div>
+            </div>
+            <button id="BuddyFormSubmit" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
