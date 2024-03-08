@@ -1,0 +1,25 @@
+@model List<string>
+@{
+    ViewData["Title"] = "Buddy Summary";
+}
+
+<div class="container-fluid text-center">
+    <h1>Buddy Summary</h1>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>@Model[0]</h3>
+            <div id="PokemonImage"></div>
+            <div id="Weight_to_convert">@Model[1]</div><div id="WeightLabel">lbs</div>
+            <button id="Convert">Convert to Kilograms</button>
+        </div>
+        <div class="col-sm-8">
+            <div>Nickname: @Model[5]</div><br>
+            <div>Health Status: @Model[2]</div><br>
+            <div>Recommend Foods:</div>
+            <div>Avoid Foods:</div>
+            <div>Allergies: @Model[3]</div>
+        </div>
+    </div>
+</div>
