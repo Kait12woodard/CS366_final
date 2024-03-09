@@ -9,17 +9,29 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-4">
-            <h3>@Model[0]</h3>
+            <h3 id="PokemonType">@Model[0]</h3>
             <div id="PokemonImage"></div>
             <div id="Weight_to_convert">@Model[1]</div><div id="WeightLabel">lbs</div>
-            <button id="Convert">Convert to Kilograms</button>
+            <button id="Convert_kilo">Convert to Kilograms</button>
+            <button id="Convert_lbs">Convert to Pounds</button>
         </div>
         <div class="col-sm-8">
             <div>Nickname: @Model[5]</div><br>
             <div>Health Status: @Model[2]</div><br>
-            <div>Recommend Foods:</div>
-            <div>Avoid Foods:</div>
-            <div>Allergies: @Model[3]</div>
+            <div>Allergies: @Model[3]</div><br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h6>Recommended Food:</h6>
+            <ul id="recFood">@Model[4]<br>
+            </ul>
+            <button id="RecommendButton">Learn Recommended Food</button>
+        </div>
+        <div class="col-sm-6">
+            <h6>Foods to Avoid:</h6>
+            <ul id="avoidFood"></ul>
+            <button id="AvoidButton">Learn Foods to Avoid</button>
         </div>
     </div>
 </div>
