@@ -10,48 +10,53 @@
     <div class="row">
         <form class="row">
             <div id="pokemonForm" class="col-sm-6">
-
-                <input type="checkbox" name="pokemon" value="Mimikyu">
-                <label for="pokemon">Mimikyu</label><br>
-
-                <input type="checkbox" name="pokemon" value="Eevee">
-                <label for="pokemon">Eevee</label><br>
-
-                <input type="checkbox" name="pokemon" value="Gengar">
-                <label for="pokemon">Gengar</label><br>
-
-                <input type="checkbox" name="pokemon" value="Charizard">
-                <label for="pokemon">Charizard</label><br>
-
-                <input type="checkbox" name="pokemon" value="Lapras">
-                <label for="pokemon">Lapras</label><br>
+                <div class="radioPokemon">
+                    <input type="radio" name="pokemon" value="Mimikyu">
+                    <label for="pokemon">Mimikyu</label><br>
+                </div>
+                <div class="radioPokemon">
+                    <input type="radio" name="pokemon" value="Eevee">
+                    <label for="pokemon">Eevee</label><br>
+                </div>
+                <div class="radioPokemon">
+                    <input type="radio" name="pokemon" value="Gengar">
+                    <label for="pokemon">Gengar</label><br>
+                </div>
+                <div class="radioPokemon">
+                    <input type="radio" name="pokemon" value="Charizard">
+                    <label  for="pokemon">Charizard</label><br>                    
+                </div>
+                <div class="radioPokemon">
+                    <input type="radio" name="pokemon" value="Lapras">
+                    <label for="pokemon">Lapras</label><br>
+                </div>
             </div>
             <div id="pokmonDetails" class="col-sm-6">
-                <div>
+                <div class="inputPokemon">
                     <label for="weight">Pokemon's weight (lbs):</label>
                     <input type="number" name="weight"><br>
                 </div>
-                <div>
+                <div class="inputPokemon">
                     <label for="allergy">Pokemon's Allergies</label>
                     <select name="allergy">
                         <option value="none">None</option>
-                        <option value="nuts">Nuts</option>
-                        <option value="berries">Berries</option>
-                        <option value="eggs">Eggs</option>
-                        <option value="gluten">Gluten</option>
-                        <option value="milk">Milk</option>
+                        <option value="Nuts">Nuts</option>
+                        <option value="Berries">Berries</option>
+                        <option value="Eggs">Eggs</option>
+                        <option value="Gluten">Gluten</option>
+                        <option value="Milk">Milk</option>
                     </select>
                 </div>
-                <div>
+                <div class="inputPokemon">
                     <label for="food">Favorite Food:</label>
                     <input type="text" name="food"><br>
                 </div>
-                <div>
+                <div class="inputPokemon">
                     <label for="nickname">Nickname:</label>
                     <input type="text" name="nickname"><br><br>
                 </div>
             </div>
-            <button id="BuddyFormSubmit" type="submit">Submit</button>
+            <button id="BuddyFormSubmit" onclick="validate(pokemon, weight, food, nickname)" type="submit">Submit</button>
         </form>
     </div>
 </div>

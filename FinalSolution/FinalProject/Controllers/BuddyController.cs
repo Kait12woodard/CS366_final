@@ -8,7 +8,7 @@ public class BuddyController : Controller
     [HttpGet]
     public IActionResult BuddyForm(string? pokemon, double? weight, string? allergy, string? food, string? nickname)
     {
-        if(pokemon != null || weight != null || allergy != null || food != null || nickname != null)
+        if(pokemon != null && weight != null && food != null && nickname != null)
         {
             List<string> summary = new List<string>();
             summary.Add(pokemon);

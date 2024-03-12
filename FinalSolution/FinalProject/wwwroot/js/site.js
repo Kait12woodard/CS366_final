@@ -5,8 +5,40 @@ $(document).ready(function(){
     })
 });
 
-//Converts weight from lbs to kg
+//Validates Buddy Form Inputs Client side
+function validate(pokemon, weight, food, nickname)
+{
+    var error= "";
+    
+    var isChecked = Array.from(pokemon).some(box => box.checked)
+    if(isChecked === false)
+    {
+        error= "Please select a pokemon"
+        alert(error);
+        return false;
+    }
+    if(weight.value > 1000 || weight.value < 1)
+    {
+        error="Please enter a valid weight between 1 to 999";
+        alert(error);
+        return false;
+    }
+    if(food.value.length < 2 || food.value.length > 100)
+    {
+        error="Please enter a valid Favorite Food between 2-100 characters long";
+        alert(error);
+        return false;
+    }
+    if(nickname.value.length < 2 || nickname.value.length > 100)
+    {
+        error="Please enter a valid Nickname between 2-100 characters long";
+        alert(error);
+        return false;
+    }
+}
+
 $("#Convert_lbs").hide();
+$("#avoidFood").hide();
 
 document.getElementById("Convert_kilo").addEventListener("click", function() {
     const stringWeight = document.getElementById("Weight_to_convert");
@@ -14,19 +46,18 @@ document.getElementById("Convert_kilo").addEventListener("click", function() {
     const kiloWeight = blsWeight * 0.453592;
     stringWeight.innerText = kiloWeight.toFixed(2);
     const label = document.getElementById("WeightLabel");
-    label.innerText = "kg"
+    label.innerText = "Kilograms"
     $("#Convert_kilo").hide();
     $("#Convert_lbs").show();
 });
 
-//Converts weight from kg to lbs
 document.getElementById("Convert_lbs").addEventListener("click", function() {
     const stringWeight = document.getElementById("Weight_to_convert");
     const blsWeight = parseFloat(stringWeight.innerText);
     const kiloWeight = blsWeight * 2.2046;
     stringWeight.innerText = kiloWeight.toFixed(2);
     const label = document.getElementById("WeightLabel");
-    label.innerText = "lbs"
+    label.innerText = "Pounds"
     $("#Convert_lbs").hide();
     $("#Convert_kilo").show();
 });
@@ -72,6 +103,7 @@ $(document).ready(function() {
     $("#AvoidButton").click(function(){
         $("#avoidFood").append(avoidFood[avoidCount]+ "<br>");
         avoidCount++;
+        $("#avoidFood").show();
         if(avoidCount === 3) 
         {
             $("#AvoidButton").hide();
@@ -164,6 +196,8 @@ $(document).ready(function() {
         }
     }
 
-    $("#PokemonImage").append("<img src= '/Images/"+ image + "' alt= '" + alt +"'>");
+    $("#PokemonImage").append("<img id='HealthImage' src= '/Images/"+ image + "' alt= '" + alt +"'>");
 });
+
+
 
