@@ -1,0 +1,54 @@
+@model FinalProject.Models.Day;
+
+@{
+    ViewData["Title"] = "Add to Planner";
+}
+
+<div class="container-fluid">
+    <h1>Add To Planner</h1>
+</div>
+
+<div class="container-fluid">
+    <form asp-controller="Menu" asp-action="Day" method="post">
+        <div class="container-fluid">
+            <h5>What day?</h5>
+            <select id="weekdays" asp-for="Weekday">
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select><br><br>
+        </div>
+
+        <div class="container-fluid">
+            <h5>Which Meal?</h5>
+            <input type="radio" value="Breakfast" id="breakfast" asp-for="MealType">
+            <label asp-for="MealType">Breakfast</label><br>
+            <input type="radio" value="Lunch" id="lunch" asp-for="MealType">
+            <label asp-for="MealType">Lunch</label><br>
+            <input type="radio" value="Dinner" id="dinner" asp-for="MealType">
+            <label asp-for="MealType">Dinner</label><br>
+        </div>
+
+        <div class="container-fluid">
+            <h5>What's for dinner?</h5>
+            <label asp-for="MealTitle">Meal Name: </label>
+            <input type="text" asp-for="MealTitle"><br>
+        </div>
+
+        <div class="container-fluid">
+            <h5>Anything worth Noting?</h5>
+            <label asp-for="MealNotes">Notes: </label>
+            <input type="text" asp-for="MealNotes"><br>
+        </div>
+
+        <div class="container-fluid">
+            <h5>How Many Guests are Eating?</h5>
+            <label asp-for="Guests"> Guests: </label>
+            <input type="number" asp-for="Guests">
+        </div>
+    </form>
+</div>
