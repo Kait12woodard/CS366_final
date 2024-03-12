@@ -19,7 +19,7 @@ function validate(pokemon, weight, food, nickname)
     }
     if(weight.value > 1000 || weight.value < 1)
     {
-        error="Please enter a valid weight between 1 to 999";
+        error="Please enter a valid weight between 1 to 1000";
         alert(error);
         return false;
     }
