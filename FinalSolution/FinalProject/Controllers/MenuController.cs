@@ -12,13 +12,100 @@ public class MenuController : Controller
         return View();
     }
 
-    [HttpGet] //, int day, int meal
+    [HttpPost]
+    public IActionResult MenuPlanner(int delete)
+    {
+        if(delete >= 20)
+        {
+            switch(delete)
+            {
+                case 20:
+                    Repository.Week.Monday.Dinner = new Meal();
+                    break;
+                case 21:
+                    Repository.Week.Tuesday.Dinner = new Meal();
+                    break;
+                case 22:
+                    Repository.Week.Wednesday.Dinner = new Meal();
+                    break;
+                case 23:
+                    Repository.Week.Thursday.Dinner = new Meal();
+                    break;
+                case 24:
+                    Repository.Week.Friday.Dinner = new Meal();
+                    break;
+                case 25:
+                    Repository.Week.Saturday.Dinner = new Meal();
+                    break;
+                case 26:
+                    Repository.Week.Sunday.Dinner = new Meal();
+                    break;
+            }
+        }
+        else if(delete >= 10)
+        {
+            switch(delete)
+            {
+                case 10:
+                    Repository.Week.Monday.Lunch = new Meal();
+                    break;
+                case 11:
+                    Repository.Week.Tuesday.Lunch = new Meal();
+                    break;
+                case 12:
+                    Repository.Week.Wednesday.Lunch = new Meal();
+                    break;
+                case 13:
+                    Repository.Week.Thursday.Lunch = new Meal();
+                    break;
+                case 14:
+                    Repository.Week.Friday.Lunch = new Meal();
+                    break;
+                case 15:
+                    Repository.Week.Saturday.Lunch = new Meal();
+                    break;
+                case 16:
+                    Repository.Week.Sunday.Lunch = new Meal();
+                    break;
+            }
+        }
+        else
+        {
+            switch(delete)
+            {
+                case 00:
+                    Repository.Week.Monday.Breakfast = new Meal();
+                    break;
+                case 01:
+                    Repository.Week.Tuesday.Breakfast = new Meal();
+                    break;
+                case 02:
+                    Repository.Week.Wednesday.Breakfast = new Meal();
+                    break;
+                case 03:
+                    Repository.Week.Thursday.Breakfast = new Meal();
+                    break;
+                case 04:
+                    Repository.Week.Friday.Breakfast = new Meal();
+                    break;
+                case 05:
+                    Repository.Week.Saturday.Breakfast = new Meal();
+                    break;
+                case 06:
+                    Repository.Week.Sunday.Breakfast = new Meal();
+                    break;
+            }
+        }
+        return View(Repository.Week);
+    }
+
+    [HttpGet] 
     public IActionResult AddToPlanner()
     {
-        Debug.WriteLine("Inside Menu Controller");
-        return View("AddToPlanner");
+        return View();
     }
-//Solving how to bind the variables correctly
+
+
     [HttpPost]
     public IActionResult AddToPlanner(HelperMeal meal)
     {
