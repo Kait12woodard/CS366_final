@@ -1,11 +1,14 @@
 namespace FinalProject.Models {
     public class Day {
-        
-        public string Weekday {get; set;}
-        public string MealType {get; set;}
-        public string MealTitle {get; set;}
-        public string MealNotes {get; set;}
-        public int Guests {get; set;}
+        public Meal Breakfast {get; set;}
+        public Meal Lunch {get; set;}
+        public Meal Dinner {get; set;}
 
+        public Day()
+        {
+            Breakfast = new Meal();
+            Lunch = new Meal();
+            Dinner = new Meal();
+        }
     }
 }

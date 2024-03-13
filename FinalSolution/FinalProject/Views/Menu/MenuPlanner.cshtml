@@ -1,4 +1,4 @@
-@model FinalProject.Models.Day;
+@model FinalProject.Models.Week;
 
 @{
     ViewData["Title"] = "Menu Planner";
@@ -24,6 +24,17 @@
 <div class="container-fluid">
     <h2>Monday</h2>
     <table>
+        @if(Model != null)
+        {
+            <div>
+                @if(Model.Monday.Breakfast.MealTitle != null)
+                {@Model.Monday.Breakfast.MealTitle}
+                @if(Model.Monday.Lunch.MealTitle != null)
+                {@Model.Monday.Lunch.MealTitle}
+                @if(Model.Monday.Dinner != null)
+                {@Model.Monday.Dinner.MealTitle}
+            </div>
+        }
         <tr>
             <th>Meal</th>
             <th>Meal Title</th>

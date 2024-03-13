@@ -1,4 +1,4 @@
-@model FinalProject.Models.Day;
+@model FinalProject.Models.HelperMeal;
 
 @{
     ViewData["Title"] = "Add to Planner";
@@ -9,46 +9,50 @@
 </div>
 
 <div class="container-fluid">
-    <form asp-controller="Menu" asp-action="Day" method="post">
+    <form asp-controller="Menu" asp-action="AddToPlanner" method="post">
         <div class="container-fluid">
             <h5>What day?</h5>
-            <select id="weekdays" asp-for="Weekday">
-                <option value="Monday">Monday</option>
-                <option value="Tuesday">Tuesday</option>
-                <option value="Wednesday">Wednesday</option>
-                <option value="Thursday">Thursday</option>
-                <option value="Friday">Friday</option>
-                <option value="Saturday">Saturday</option>
-                <option value="Sunday">Sunday</option>
+            <select asp-for="DayCode">
+                <option value="0">Monday</option>
+                <option value="1">Tuesday</option>
+                <option value="2">Wednesday</option>
+                <option value="3">Thursday</option>
+                <option value="4">Friday</option>
+                <option value="5">Saturday</option>
+                <option value="6">Sunday</option>
             </select><br><br>
         </div>
 
         <div class="container-fluid">
             <h5>Which Meal?</h5>
-            <input type="radio" value="Breakfast" id="breakfast" asp-for="MealType">
-            <label asp-for="MealType">Breakfast</label><br>
-            <input type="radio" value="Lunch" id="lunch" asp-for="MealType">
-            <label asp-for="MealType">Lunch</label><br>
-            <input type="radio" value="Dinner" id="dinner" asp-for="MealType">
-            <label asp-for="MealType">Dinner</label><br>
+            <input type="radio" value="0" id="breakfast" asp-for="MealCode">
+            <label asp-for="MealCode">Breakfast</label><br>
+            <input type="radio" value="1" id="lunch" asp-for="MealCode">
+            <label asp-for="MealCode">Lunch</label><br>
+            <input type="radio" value="2" id="dinner" asp-for="MealCode">
+            <label asp-for="MealCode">Dinner</label><br>
         </div>
 
         <div class="container-fluid">
             <h5>What's for dinner?</h5>
-            <label asp-for="MealTitle">Meal Name: </label>
-            <input type="text" asp-for="MealTitle"><br>
+            <label asp-for="NewMeal.MealTitle">Meal Name: </label>
+            <input type="text" asp-for="NewMeal.MealTitle"><br>
         </div>
 
         <div class="container-fluid">
             <h5>Anything worth Noting?</h5>
-            <label asp-for="MealNotes">Notes: </label>
-            <input type="text" asp-for="MealNotes"><br>
+            <label asp-for="NewMeal.MealNotes">Notes: </label>
+            <input type="text" asp-for="NewMeal.MealNotes"><br>
         </div>
 
         <div class="container-fluid">
             <h5>How Many Guests are Eating?</h5>
-            <label asp-for="Guests"> Guests: </label>
-            <input type="number" asp-for="Guests">
+            <label asp-for="NewMeal.Guests"> Guests: </label>
+            <input type="number" asp-for="NewMeal.Guests">
+        </div>
+
+        <div class="container-fluid">
+            <button type="submit">Submit</button>
         </div>
     </form>
 </div>
