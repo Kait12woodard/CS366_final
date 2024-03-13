@@ -15,7 +15,17 @@ public class MenuController : Controller
     [HttpPost]
     public IActionResult MenuPlanner(int delete)
     {
-        if(delete >= 20)
+        if(delete == 99)
+        {
+            Repository.Week.Monday = new Day();
+            Repository.Week.Tuesday = new Day();
+            Repository.Week.Wednesday = new Day();
+            Repository.Week.Thursday = new Day();
+            Repository.Week.Friday = new Day();
+            Repository.Week.Saturday = new Day();
+            Repository.Week.Sunday = new Day();
+        }
+        else if(delete >= 20)
         {
             switch(delete)
             {

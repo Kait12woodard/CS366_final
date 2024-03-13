@@ -14,7 +14,9 @@
             <a asp-controller="Menu" asp-action="AddToPlanner" id="">Plan A Meal</a>
         </div>
         <div class="col-sm-6">
-            <button type="submit">Clear</button>
+            <form asp-controller="Menu" asp-action="MenuPlanner" method="post">
+                <button type="submit" name="delete" value="99">Clear</button>
+            </form>
         </div>
     </div>
 </div>
