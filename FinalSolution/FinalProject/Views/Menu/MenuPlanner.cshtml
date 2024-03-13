@@ -20,161 +20,216 @@
 </div>
 
 
-
 <div class="container-fluid">
-    <h2>Monday</h2>
-    <table>
-        @if(Model != null)
-        {
-            <div>
-                @if(Model.Monday.Breakfast.MealTitle != null)
-                {@Model.Monday.Breakfast.MealTitle}
-                @if(Model.Monday.Lunch.MealTitle != null)
-                {@Model.Monday.Lunch.MealTitle}
-                @if(Model.Monday.Dinner != null)
-                {@Model.Monday.Dinner.MealTitle}
-            </div>
-        }
-        <tr>
-            <th>Meal</th>
-            <th>Meal Title</th>
-            <th>Guests</th>
-            <th>Notes</th>
-        </tr>
-        <tr>
-            <td>Breakfast</td>
-        </tr>
-        <tr>
-            <td>Lunch</td>
-        </tr>
-        <tr>
-            <td>Dinner</td>
-        </tr>
-    </table>
-</div>
+    @if(Model != null)
+    {
+        <div class="container-fluid">
+            <h2>Monday</h2>
+            <table>
+                <tr>
+                    <th>Meal</th>
+                    <th>Meal Title</th>
+                    <th>Guests</th>
+                    <th>Notes</th>
+                </tr>
+                <tr>
+                    <td>Breakfast</td>
+                    <td>@Model.Monday.Breakfast.MealTitle</td>
+                    <td>@Model.Monday.Breakfast.Guests</td>
+                    <td>@Model.Monday.Breakfast.MealNotes</td>
+                </tr>
+                <tr>
+                    <td>Lunch</td>
+                    <td>@Model.Monday.Lunch.MealTitle</td>
+                    <td>@Model.Monday.Lunch.Guests</td>
+                    <td>@Model.Monday.Lunch.MealNotes</td>
+                </tr>
+                <tr>
+                    <td>Dinner</td>
+                    <td>@Model.Monday.Dinner.MealTitle</td>
+                    <td>@Model.Monday.Dinner.Guests</td>
+                    <td>@Model.Monday.Dinner.MealNotes</td>
+                </tr>
+            </table>
+        </div>
 
-<div class="container-fluid">
-    <h2>Tuesday</h2>
-    <table>
-        <tr>
-            <th>Meal</th>
-            <th>Meal Title</th>
-            <th>Guests</th>
-            <th>Notes</th>
-        </tr>
-        <tr>
-            <td>Breakfast</td>
-        </tr>
-        <tr>
-            <td>Lunch</td>
-        </tr>
-        <tr>
-            <td>Dinner</td>
-        </tr>
-    </table>
-</div>
+        <div class="container-fluid">
+            <h2>Tuesday</h2>
+            <table>
+                <tr>
+                    <th>Meal</th>
+                    <th>Meal Title</th>
+                    <th>Guests</th>
+                    <th>Notes</th>
+                <tr>
+                    <td>Breakfast</td>
+                    <td>@Model.Tuesday.Breakfast.MealTitle</td>
+                    <td>@Model.Tuesday.Breakfast.Guests</td>
+                    <td>@Model.Tuesday.Breakfast.MealNotes</td>
+                </tr>
+                <tr>
+                    <td>Lunch</td>
+                    <td>@Model.Tuesday.Lunch.MealTitle</td>
+                    <td>@Model.Tuesday.Lunch.Guests</td>
+                    <td>@Model.Tuesday.Lunch.MealNotes</td>
+                </tr>
+                <tr>
+                    <td>Dinner</td>
+                    <td>@Model.Tuesday.Dinner.MealTitle</td>
+                    <td>@Model.Tuesday.Dinner.Guests</td>
+                    <td>@Model.Tuesday.Dinner.MealNotes</td>
+                </tr>
+            </table>
+        </div>
 
-<div class="container-fluid">
-    <h2>Wednesday</h2>
-    <table>
-        <tr>
-            <th>Meal</th>
-            <th>Meal Title</th>
-            <th>Guests</th>
-            <th>Notes</th>
-        </tr>
-        <tr>
-            <td>Breakfast</td>
-        </tr>
-        <tr>
-            <td>Lunch</td>
-        </tr>
-        <tr>
-            <td>Dinner</td>
-        </tr>
-    </table>
-</div>
+        <div class="container-fluid">
+            <h2>Wednesday</h2>
+            <table>
+                <tr>
+                    <th>Meal</th>
+                    <th>Meal Title</th>
+                    <th>Guests</th>
+                    <th>Notes</th>
+                </tr>
+                <tr>
+                    <td>Breakfast</td>
+                    <td>@Model.Wednesday.Breakfast.MealTitle</td>
+                    <td>@Model.Wednesday.Breakfast.Guests</td>
+                    <td>@Model.Wednesday.Breakfast.MealNotes</td>
+                </tr>
+                <tr>
+                    <td>Lunch</td>
+                    <td>@Model.Wednesday.Lunch.MealTitle</td>
+                    <td>@Model.Wednesday.Lunch.Guests</td>
+                    <td>@Model.Wednesday.Lunch.MealNotes</td>
+                </tr>
+                <tr>
+                    <td>Dinner</td>
+                    <td>@Model.Wednesday.Dinner.MealTitle</td>
+                    <td>@Model.Wednesday.Dinner.Guests</td>
+                    <td>@Model.Wednesday.Dinner.MealNotes</td>
+                </tr>
+            </table>
+        </div>
 
-<div class="container-fluid">
-    <h2>Thursday</h2>
-    <table>
-        <tr>
-            <th>Meal</th>
-            <th>Meal Title</th>
-            <th>Guests</th>
-            <th>Notes</th>
-        </tr>
-        <tr>
-            <td>Breakfast</td>
-        </tr>
-        <tr>
-            <td>Lunch</td>
-        </tr>
-        <tr>
-            <td>Dinner</td>
-        </tr>
-    </table>
-</div>
+        <div class="container-fluid">
+            <h2>Thursday</h2>
+            <table>
+                <tr>
+                    <th>Meal</th>
+                    <th>Meal Title</th>
+                    <th>Guests</th>
+                    <th>Notes</th>
+                </tr>
+                <tr>
+                    <td>Breakfast</td>
+                    <td>@Model.Thursday.Breakfast.MealTitle</td>
+                    <td>@Model.Thursday.Breakfast.Guests</td>
+                    <td>@Model.Thursday.Breakfast.MealNotes</td>
+                </tr>
+                <tr>
+                    <td>Lunch</td>
+                    <td>@Model.Thursday.Lunch.MealTitle</td>
+                    <td>@Model.Thursday.Lunch.Guests</td>
+                    <td>@Model.Thursday.Lunch.MealNotes</td>
+                </tr>
+                <tr>
+                    <td>Dinner</td>
+                    <td>@Model.Thursday.Dinner.MealTitle</td>
+                    <td>@Model.Thursday.Dinner.Guests</td>
+                    <td>@Model.Thursday.Dinner.MealNotes</td>
+                </tr>
+            </table>
+        </div>
 
-<div class="container-fluid">
-    <h2>Friday</h2>
-    <table>
-        <tr>
-            <th>Meal</th>
-            <th>Meal Title</th>
-            <th>Guests</th>
-            <th>Notes</th>
-        </tr>
-        <tr>
-            <td>Breakfast</td>
-        </tr>
-        <tr>
-            <td>Lunch</td>
-        </tr>
-        <tr>
-            <td>Dinner</td>
-        </tr>
-    </table>
-</div>
+        <div class="container-fluid">
+            <h2>Friday</h2>
+            <table>
+                <tr>
+                    <th>Meal</th>
+                    <th>Meal Title</th>
+                    <th>Guests</th>
+                    <th>Notes</th>
+                </tr>
+                <tr>
+                    <td>Breakfast</td>
+                    <td>@Model.Friday.Breakfast.MealTitle</td>
+                    <td>@Model.Friday.Breakfast.Guests</td>
+                    <td>@Model.Friday.Breakfast.MealNotes</td>
+                </tr>
+                <tr>
+                    <td>Lunch</td>
+                    <td>@Model.Friday.Lunch.MealTitle</td>
+                    <td>@Model.Friday.Lunch.Guests</td>
+                    <td>@Model.Friday.Lunch.MealNotes</td>
+                </tr>
+                <tr>
+                    <td>Dinner</td>
+                    <td>@Model.Friday.Dinner.MealTitle</td>
+                    <td>@Model.Friday.Dinner.Guests</td>
+                    <td>@Model.Friday.Dinner.MealNotes</td>
+                </tr>
+            </table>
+        </div>
 
-<div class="container-fluid">
-    <h2>Saturday</h2>
-    <table>
-        <tr>
-            <th>Meal</th>
-            <th>Meal Title</th>
-            <th>Guests</th>
-            <th>Notes</th>
-        </tr>
-        <tr>
-            <td>Breakfast</td>
-        </tr>
-        <tr>
-            <td>Lunch</td>
-        </tr>
-        <tr>
-            <td>Dinner</td>
-        </tr>
-    </table>
-</div>
+        <div class="container-fluid">
+            <h2>Saturday</h2>
+            <table>
+                <tr>
+                    <th>Meal</th>
+                    <th>Meal Title</th>
+                    <th>Guests</th>
+                    <th>Notes</th>
+                </tr>
+                <tr>
+                    <td>Breakfast</td>
+                    <td>@Model.Saturday.Breakfast.MealTitle</td>
+                    <td>@Model.Saturday.Breakfast.Guests</td>
+                    <td>@Model.Saturday.Breakfast.MealNotes</td>
+                </tr>
+                <tr>
+                    <td>Lunch</td>
+                    <td>@Model.Saturday.Lunch.MealTitle</td>
+                    <td>@Model.Saturday.Lunch.Guests</td>
+                    <td>@Model.Saturday.Lunch.MealNotes</td>
+                </tr>
+                <tr>
+                    <td>Dinner</td>
+                    <td>@Model.Saturday.Dinner.MealTitle</td>
+                    <td>@Model.Saturday.Dinner.Guests</td>
+                    <td>@Model.Saturday.Dinner.MealNotes</td>
+                </tr>
+            </table>
+        </div>
 
-<div class="container-fluid">
-    <h2>Sunday</h2>
-    <table>
-        <tr>
-            <th>Meal</th>
-            <th>Meal Title</th>
-            <th>Guests</th>
-            <th>Notes</th>
-        </tr>
-        <tr>
-            <td>Breakfast</td>
-        </tr>
-        <tr>
-            <td>Lunch</td>
-        </tr>
-        <tr>
-            <td>Dinner</td>
-        </tr>
-    </table>
+        <div class="container-fluid">
+            <h2>Sunday</h2>
+            <table>
+                <tr>
+                    <th>Meal</th>
+                    <th>Meal Title</th>
+                    <th>Guests</th>
+                    <th>Notes</th>
+                </tr>
+                <tr>
+                    <td>Breakfast</td>
+                    <td>@Model.Sunday.Breakfast.MealTitle</td>
+                    <td>@Model.Sunday.Breakfast.Guests</td>
+                    <td>@Model.Sunday.Breakfast.MealNotes</td>
+                </tr>
+                <tr>
+                    <td>Lunch</td>
+                    <td>@Model.Sunday.Lunch.MealTitle</td>
+                    <td>@Model.Sunday.Lunch.Guests</td>
+                    <td>@Model.Sunday.Lunch.MealNotes</td>
+                </tr>
+                <tr>
+                    <td>Dinner</td>
+                    <td>@Model.Sunday.Dinner.MealTitle</td>
+                    <td>@Model.Sunday.Dinner.Guests</td>
+                    <td>@Model.Sunday.Dinner.MealNotes</td>
+                </tr>
+            </table>
+        </div>
+    }
 </div>
