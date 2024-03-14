@@ -1,0 +1,387 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #fc0000;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: rgb(111, 5, 5);
+}
+
+h1
+{
+  text-align: center;
+  font-size: 70px;
+  background-color: rgb(201, 12, 12);
+  color: white;
+  padding: 10px;
+  border: 3px solid black;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+h2
+{
+  color: rgb(201, 12, 12);
+  background-color: white;
+  border: 10px solid rgb(40, 140, 227);
+  font-weight: 800;
+  margin-top: 30px;
+  padding: 15px;
+}
+
+h4
+{
+  font-weight: bold;
+  padding: 10px;
+  background-color: rgb(201, 12, 12);
+  color: white;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+button 
+{
+  margin-bottom: 20px;
+  background-color: rgb(201, 12, 12);
+  border: 2px solid black;
+  border-radius: 20px;
+  color: white;
+  padding: 10px 30px;
+  font-size: 18px;
+}
+
+button:hover
+{
+  background-color: rgb(40, 140, 227);
+}
+
+/*Home Page Styling*/
+#snorlax
+{
+  height: 400px;
+}
+
+.description
+{
+  font-size: 18px;
+  border: 3px solid black;
+  padding: 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  background-color: white;
+}
+
+#PokemonBuddyLink, #MenuPlannerLink
+{
+  justify-content: center;
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+  background-color: rgb(201, 12, 12);
+  font-size: 25px;
+  border: 2px solid black;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#PokemonBuddyLink:hover, #MenuPlannerLink:hover
+{
+  background-color: rgb(40, 140, 227);
+}
+
+#snorlaxAnimation
+{
+  border: 2px solid black;
+  border-radius: 1000px;
+  background-color: white;
+}
+
+/*Styling BuddyForm*/
+#pokemonFormColumns
+{
+  display: grid;
+  justify-content: center;
+}
+
+#pokemonForm
+{
+  background-color: white;
+  border: 2px solid black;
+  padding: 10px;
+  padding-left: 50px;
+  max-width: 400px;
+  border-radius: 30px;
+}
+
+#pokemonDetails
+{
+  max-width: 500px;
+}
+
+.radioPokemon 
+{
+  font-size: 25px;
+  padding: 5px;
+}
+
+.radioPokemon input[type=radio]
+{
+  accent-color: red;
+  height: 1em;
+  width: 1em;
+}
+
+
+.inputPokemon
+{
+  margin: 10px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid black;
+  font-size: 18px;
+  min-width: 250px;
+}
+
+#BuddyFormSubmit
+{
+  font-size: 20px;
+  margin: auto;
+  margin-top: 20px;
+  justify-content: center;
+  max-width: 200px;
+  padding: 10px;
+  background-color: rgb(201, 12, 12);
+  border: 2px solid black;
+  color: white;
+}
+
+#BuddyFormSubmit:hover
+{
+  background-color: rgb(40, 140, 227);
+}
+
+
+/*Buddy Summary page styling*/
+
+#PokemonType
+{
+  width: 400px;
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  margin-left: 30px;
+}
+
+#HealthImage
+{
+  border: 6px solid rgb(201, 12, 12);
+  background-color: white;
+  width: 400px;
+  margin: 30px;
+}
+
+#SummaryDetails
+{
+  margin:auto;
+  justify-content: center;
+  color: white;
+  font-size: 25px;
+  min-width: 200px;
+}
+
+#SummaryColumns
+{
+  margin: auto;
+  justify-content: center;
+}
+
+#WeightLabel
+{
+  text-align: center;
+  background-color: rgb(201, 12, 12);
+  color: white;
+  font-size: 25px;
+  border: 2px solid black;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+  padding: 20px;
+  max-width: 250px;
+}
+
+#Weight_to_convert
+{
+  background-color: white;
+  color: black;
+  text-align: center;
+  border: 2px solid black;
+  padding: 20px;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  font-size: 40px;
+  margin-bottom: 20px;
+  max-width: 250px;
+}
+
+ul
+{
+  font-size: 20px;
+  background-color: white;
+  border: 2px solid black;
+  padding: 15px 45px;
+}
+
+.ListButtons
+{
+  text-align: center;
+}
+
+/*Meal Panner Page Styling*/
+#addMealLink 
+{
+  text-decoration: none;
+  margin-top: 30px;
+  background-color: rgb(201, 12, 12);
+  border: 2px solid black;
+  border-radius: 20px;
+  color: white;
+  padding: 12px 30px;
+  font-size: 18px;
+}
+
+#addMealLink:hover
+{
+  background-color: rgb(40, 140, 227);
+}
+
+
+/*AddToPlanner Page Styling*/
+.formQuestionBox
+{
+  margin: auto;
+  margin-top: 40px;
+  background-color: rgb(238, 206, 27);
+  border: 6px solid rgb(40, 140, 227);
+  border-radius: 15px;
+  padding: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  align-items: center;
+}
+
+.validation-summary-errors ul
+{
+  text-align: left;
+  background-color: white;
+  color: rgb(201, 12, 12);
+  border: 10px solid rgb(201, 12, 12) !important;
+}
+
+.validation-summary-valid ul
+{
+  border: none;
+  background-color: rgb(111, 5, 5);
+}
+
+.dropdown
+{
+  position: relative;
+  display: inline-block;
+  background-color: white;
+  padding: 10px;
+  color: black;
+  font-weight: 600;
+  border: 6px solid rgb(40, 140, 227);
+  border-radius: 30px;
+  text-align: center;
+}
+
+#submitAddPlannerButton
+{
+  padding: 30px;
+}
+
+.radioMealButton
+{
+  font-size: 18px;
+  padding: 10px;
+}
+.radioMealButton input[type=radio]
+{
+  accent-color: rgb(40, 140, 227);
+  height: 1em;
+  width: 1em;
+}
+
+.textbox
+{
+  border-radius: 25px;
+  border: 6px solid rgb(40, 140, 227);
+}
+
+.questionLabel
+{
+  color: rgb(40, 140, 227);
+}
+
+.simpleQuestions
+{
+  padding: 30px;
+}
+
+/*Weekly Planner*/
+table
+{
+  background-color: rgb(235, 158, 171);
+  min-width: 100px;
+  border: 10px solid rgb(201, 12, 12);
+}
+
+th,td
+{
+  text-align: center;
+  padding: 10px 30px;
+}
+
+th
+{
+  font-weight: 900;
+  font-size: 25px;
+}
+
+td
+{
+  font-weight: 700;
+  font-size: 20px;
+}
+
+#weekDisplayBox
+{
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  align-items: center;
+  display: flex;
+}
+
+.linkLeveler
+{
+  padding: 12px;
+}
+
