@@ -1,0 +1,73 @@
+@model FinalProject.Models.HelperMeal;
+
+@{
+    ViewData["Title"] = "Add to Planner";
+}
+
+<div class="container-fluid">
+    <h1>Add To Planner</h1>
+</div>
+
+<div class="container-fluid text-center">
+    <form asp-controller="Menu" asp-action="AddToPlanner" method="post">
+        <div asp-validation-summary="All"></div>
+        <div class="container-fluid formQuestionBox">
+            <h4>What day?</h4>
+            <div class="simpleQuestions">
+                <select asp-for="DayCode" class="dropdown">
+                    <option value="0">Monday</option>
+                    <option value="1">Tuesday</option>
+                    <option value="2">Wednesday</option>
+                    <option value="3">Thursday</option>
+                    <option value="4">Friday</option>
+                    <option value="5">Saturday</option>
+                    <option value="6">Sunday</option>
+                </select><br><br>
+            </div>
+        </div>
+
+        <div class="container-fluid formQuestionBox">
+            <h4>Which Meal?</h4>
+            <div class="radioMealButton">
+                <input type="radio" value="0" id="breakfast" checked asp-for="MealCode">
+                <label class="questionLabel" asp-for="MealCode">Breakfast</label><br>
+            </div>
+            <div class="radioMealButton">
+                <input type="radio" value="1" id="lunch" asp-for="MealCode">
+                <label class="questionLabel" asp-for="MealCode">Lunch</label><br>
+            </div>
+            <div class="radioMealButton">
+                <input type="radio" value="2" id="dinner" asp-for="MealCode">
+                <label class="questionLabel" asp-for="MealCode">Dinner</label><br>
+            </div>
+        </div>
+
+        <div class="container-fluid formQuestionBox">
+            <h4>What are we Eating??</h4>
+            <div class="simpleQuestions">
+                <label class="questionLabel" asp-for="NewMeal.MealTitle">Meal Name:  </label>
+                <input class="textbox" type="text" asp-for="NewMeal.MealTitle"><br>
+            </div>
+        </div>
+
+        <div class="container-fluid formQuestionBox">
+            <h4>Anything worth Noting?</h4>
+            <div class="simpleQuestions">
+                <label class="questionLabel" asp-for="NewMeal.MealNotes">Notes:  </label>
+                <input class="textbox" type="text" asp-for="NewMeal.MealNotes"><br>
+            </div>
+        </div>
+
+        <div class="container-fluid formQuestionBox">
+            <h4>How Many Guests are Eating?</h4>
+            <div class="simpleQuestions">
+                <label class="questionLabel" asp-for="NewMeal.Guests"> Guests:  </label>
+                <input class="textbox" type="number" asp-for="NewMeal.Guests">
+            </div>
+        </div>
+
+        <div class="container-fluid" id="submitAddPlannerButton">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>

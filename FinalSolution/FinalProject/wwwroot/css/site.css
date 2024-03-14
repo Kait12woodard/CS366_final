@@ -44,7 +44,7 @@ h2
   padding: 15px;
 }
 
-.ListTitle
+h4
 {
   font-weight: bold;
   padding: 10px;
@@ -176,6 +176,7 @@ button:hover
 {
   background-color: rgb(40, 140, 227);
 }
+
 
 
 /*Buddy Summary page styling*/

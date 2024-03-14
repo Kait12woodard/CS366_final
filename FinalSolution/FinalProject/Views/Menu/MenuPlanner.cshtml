@@ -1,0 +1,269 @@
+@model FinalProject.Models.Week;
+
+@{
+    ViewData["Title"] = "Menu Planner";
+}
+
+<div class="container-fluid text-center">
+    <h1>Weekly Meal Planner</h1>
+</div>
+
+<div class="container-fluid text-center">
+    <div class="row">
+        <div class="col-sm-6 linkLeveler">
+            <a asp-controller="Menu" asp-action="AddToPlanner" id="addMealLink">Plan A Meal</a>
+        </div>
+        <div class="col-sm-6">
+            <form asp-controller="Menu" asp-action="MenuPlanner" method="post">
+                <button type="submit" name="delete" value="99" id="clearButton">Clear</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid text-center">
+    @if(Model != null)
+    {
+        <div class="container-fluid" id="weekDisplayBox">
+            <form asp-controller="Menu" asp-action="MenuPlanner" method="post">
+            <div class="container-fluid">
+                <h2>Monday</h2>
+                <table>
+                    <tr>
+                        <th>Meal</th>
+                        <th>Meal Title</th>
+                        <th>Guests</th>
+                        <th>Notes</th>
+                        <th>Delete</th>
+                    </tr>
+                    <tr>
+                        <td>Breakfast</td>
+                        <td>@Model.Monday.Breakfast.MealTitle</td>
+                        <td>@Model.Monday.Breakfast.Guests</td>
+                        <td>@Model.Monday.Breakfast.MealNotes</td>
+                        <td><button type="submit" name="delete" value="00">X</button></td>
+                    </tr>
+                    <tr>
+                        <td>Lunch</td>
+                        <td>@Model.Monday.Lunch.MealTitle</td>
+                        <td>@Model.Monday.Lunch.Guests</td>
+                        <td>@Model.Monday.Lunch.MealNotes</td>
+                        <td><button type="submit" name="delete" value="10">X</button></td>
+                    </tr>
+                    <tr>
+                        <td>Dinner</td>
+                        <td>@Model.Monday.Dinner.MealTitle</td>
+                        <td>@Model.Monday.Dinner.Guests</td>
+                        <td>@Model.Monday.Dinner.MealNotes</td>
+                        <td><button type="submit" name="delete" value="20">X</button></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="container-fluid">
+                <h2>Tuesday</h2>
+                <table>
+                    <tr>
+                        <th>Meal</th>
+                        <th>Meal Title</th>
+                        <th>Guests</th>
+                        <th>Notes</th>
+                        <th>Delete</th>
+                    <tr>
+                        <td>Breakfast</td>
+                        <td>@Model.Tuesday.Breakfast.MealTitle</td>
+                        <td>@Model.Tuesday.Breakfast.Guests</td>
+                        <td>@Model.Tuesday.Breakfast.MealNotes</td>
+                        <td><button type="submit" name="delete" value="01">X</button></td>
+                    </tr>
+                    <tr>
+                        <td>Lunch</td>
+                        <td>@Model.Tuesday.Lunch.MealTitle</td>
+                        <td>@Model.Tuesday.Lunch.Guests</td>
+                        <td>@Model.Tuesday.Lunch.MealNotes</td>
+                        <td><button type="submit" name="delete" value="11">X</button></td>
+                    </tr>
+                    <tr>
+                        <td>Dinner</td>
+                        <td>@Model.Tuesday.Dinner.MealTitle</td>
+                        <td>@Model.Tuesday.Dinner.Guests</td>
+                        <td>@Model.Tuesday.Dinner.MealNotes</td>
+                        <td><button type="submit" name="delete" value="21">X</button></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="container-fluid">
+                <h2>Wednesday</h2>
+                <table>
+                    <tr>
+                        <th>Meal</th>
+                        <th>Meal Title</th>
+                        <th>Guests</th>
+                        <th>Notes</th>
+                        <th>Delete</th>
+                    </tr>
+                    <tr>
+                        <td>Breakfast</td>
+                        <td>@Model.Wednesday.Breakfast.MealTitle</td>
+                        <td>@Model.Wednesday.Breakfast.Guests</td>
+                        <td>@Model.Wednesday.Breakfast.MealNotes</td>
+                        <td><button type="submit" name="delete" value="02">X</button></td>
+                    </tr>
+                    <tr>
+                        <td>Lunch</td>
+                        <td>@Model.Wednesday.Lunch.MealTitle</td>
+                        <td>@Model.Wednesday.Lunch.Guests</td>
+                        <td>@Model.Wednesday.Lunch.MealNotes</td>
+                        <td><button type="submit" name="delete" value="12">X</button></td>
+                    </tr>
+                    <tr>
+                        <td>Dinner</td>
+                        <td>@Model.Wednesday.Dinner.MealTitle</td>
+                        <td>@Model.Wednesday.Dinner.Guests</td>
+                        <td>@Model.Wednesday.Dinner.MealNotes</td>
+                        <td><button type="submit" name="delete" value="22">X</button></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="container-fluid">
+                <h2>Thursday</h2>
+                <table>
+                    <tr>
+                        <th>Meal</th>
+                        <th>Meal Title</th>
+                        <th>Guests</th>
+                        <th>Notes</th>
+                        <th>Delete</th>
+                    </tr>
+                    <tr>
+                        <td>Breakfast</td>
+                        <td>@Model.Thursday.Breakfast.MealTitle</td>
+                        <td>@Model.Thursday.Breakfast.Guests</td>
+                        <td>@Model.Thursday.Breakfast.MealNotes</td>
+                        <td><button type="submit" name="delete" value="03">X</button></td>
+                    </tr>
+                    <tr>
+                        <td>Lunch</td>
+                        <td>@Model.Thursday.Lunch.MealTitle</td>
+                        <td>@Model.Thursday.Lunch.Guests</td>
+                        <td>@Model.Thursday.Lunch.MealNotes</td>
+                        <td><button type="submit" name="delete" value="13">X</button></td>
+                    </tr>
+                    <tr>
+                        <td>Dinner</td>
+                        <td>@Model.Thursday.Dinner.MealTitle</td>
+                        <td>@Model.Thursday.Dinner.Guests</td>
+                        <td>@Model.Thursday.Dinner.MealNotes</td>
+                        <td><button type="submit" name="delete" value="23">X</button></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="container-fluid">
+                <h2>Friday</h2>
+                <table>
+                    <tr>
+                        <th>Meal</th>
+                        <th>Meal Title</th>
+                        <th>Guests</th>
+                        <th>Notes</th>
+                        <th>Delete</th>
+                    </tr>
+                    <tr>
+                        <td>Breakfast</td>
+                        <td>@Model.Friday.Breakfast.MealTitle</td>
+                        <td>@Model.Friday.Breakfast.Guests</td>
+                        <td>@Model.Friday.Breakfast.MealNotes</td>
+                        <td><button type="submit" name="delete" value="04">X</button></td>
+                    </tr>
+                    <tr>
+                        <td>Lunch</td>
+                        <td>@Model.Friday.Lunch.MealTitle</td>
+                        <td>@Model.Friday.Lunch.Guests</td>
+                        <td>@Model.Friday.Lunch.MealNotes</td>
+                        <td><button type="submit" name="delete" value="14">X</button></td>
+                    </tr>
+                    <tr>
+                        <td>Dinner</td>
+                        <td>@Model.Friday.Dinner.MealTitle</td>
+                        <td>@Model.Friday.Dinner.Guests</td>
+                        <td>@Model.Friday.Dinner.MealNotes</td>
+                        <td><button type="submit" name="delete" value="24">X</button></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="container-fluid">
+                <h2>Saturday</h2>
+                <table>
+                    <tr>
+                        <th>Meal</th>
+                        <th>Meal Title</th>
+                        <th>Guests</th>
+                        <th>Notes</th>
+                        <th>Delete</th>
+                    </tr>
+                    <tr>
+                        <td>Breakfast</td>
+                        <td>@Model.Saturday.Breakfast.MealTitle</td>
+                        <td>@Model.Saturday.Breakfast.Guests</td>
+                        <td>@Model.Saturday.Breakfast.MealNotes</td>
+                        <td><button type="submit" name="delete" value="05">X</button></td>
+                    </tr>
+                    <tr>
+                        <td>Lunch</td>
+                        <td>@Model.Saturday.Lunch.MealTitle</td>
+                        <td>@Model.Saturday.Lunch.Guests</td>
+                        <td>@Model.Saturday.Lunch.MealNotes</td>
+                        <td><button type="submit" name="delete" value="15">X</button></td>
+                    </tr>
+                    <tr>
+                        <td>Dinner</td>
+                        <td>@Model.Saturday.Dinner.MealTitle</td>
+                        <td>@Model.Saturday.Dinner.Guests</td>
+                        <td>@Model.Saturday.Dinner.MealNotes</td>
+                        <td><button type="submit" name="delete" value="25">X</button></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="container-fluid">
+                <h2>Sunday</h2>
+                <table>
+                    <tr>
+                        <th>Meal</th>
+                        <th>Meal Title</th>
+                        <th>Guests</th>
+                        <th>Notes</th>
+                        <th>Delete</th>
+                    </tr>
+                    <tr>
+                        <td>Breakfast</td>
+                        <td>@Model.Sunday.Breakfast.MealTitle</td>
+                        <td>@Model.Sunday.Breakfast.Guests</td>
+                        <td>@Model.Sunday.Breakfast.MealNotes</td>
+                        <td><button type="submit" name="delete" value="06">X</button></td>
+                    </tr>
+                    <tr>
+                        <td>Lunch</td>
+                        <td>@Model.Sunday.Lunch.MealTitle</td>
+                        <td>@Model.Sunday.Lunch.Guests</td>
+                        <td>@Model.Sunday.Lunch.MealNotes</td>
+                        <td><button type="submit" name="delete" value="16">X</button></td>
+                    </tr>
+                    <tr>
+                        <td>Dinner</td>
+                        <td>@Model.Sunday.Dinner.MealTitle</td>
+                        <td>@Model.Sunday.Dinner.Guests</td>
+                        <td>@Model.Sunday.Dinner.MealNotes</td>
+                        <td><button type="submit" name="delete" value="26">X</button></td>
+                    </tr>
+                </table>
+            </div>
+            </form>
+        </div>
+    }
+</div>
