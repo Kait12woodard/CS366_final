@@ -1,0 +1,44 @@
+@model List<string>
+@{
+    ViewData["Title"] = "Buddy Summary";
+}
+
+<div class="container-fluid text-center">
+    <h1>Buddy Summary</h1>
+</div>
+<div class="container-fluid">
+    <div id="SummaryColumns" class="row">
+        <div class="col-sm-8">
+            <h3 id="PokemonType">@Model[0]</h3>
+            <div id="PokemonImage"></div>
+        </div>
+        <div id="SummaryDetails" class="col-sm-4">
+            <div><span style="font-size: 30px; text-decoration: underline">Nickname:</span> @Model[5]</div><br>
+            <div id="Health"><span style="font-size: 30px; text-decoration: underline">Health Status:</span> @Model[2]</div><br>
+            <div><span style="font-size: 30px; text-decoration: underline">Allergies:</span> @Model[3]</div><br>
+            <div id="WeightLabel">Pounds</div>
+            <div id="Weight_to_convert">@Model[1]</div>
+            <button id="Convert_kilo">Convert to Kilograms</button>
+            <button id="Convert_lbs">Convert to Pounds</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h4 class="ListTitle">Recommended Food:</h4>
+            <ul id="recFood">@Model[4]<br>
+            </ul>
+            <div class="ListButtons">
+                <button id="RecommendButton">Learn Recommended Food</button>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <h4 class="ListTitle">Foods to Avoid:</h4>
+            <ul id="avoidFood">
+            </ul>
+            <div class="ListButtons">
+                <button id="AvoidButton">Learn Foods to Avoid</button>
+            </div>
+
+        </div>
+    </div>
+</div>

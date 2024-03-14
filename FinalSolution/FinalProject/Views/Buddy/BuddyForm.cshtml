@@ -1,0 +1,66 @@
+@{
+    ViewData["Title"] = "Buddy Form";
+}
+
+<div class="container-fluid text-center">
+    <h1>Pick Your Pokemon Buddy</h1>
+    @if(ViewData["ErrorMessage"] != null)
+    {
+        <div id="ErrorMessage">@ViewData["ErrorMessage"]</div>
+    }
+</div>
+
+<div id="pokemonFormColumns" class="container-fluid">
+    <div class="row">
+        <form class="row">
+            <div id="pokemonForm" class="col-sm-6">
+                <div class="radioPokemon">
+                    <input class="radioColor" type="radio" name="pokemon" value="Mimikyu">
+                    <label for="pokemon">Mimikyu</label><br>
+                </div>
+                <div class="radioPokemon">
+                    <input class="radioColor" type="radio" name="pokemon" value="Eevee">
+                    <label for="pokemon">Eevee</label><br>
+                </div>
+                <div class="radioPokemon">
+                    <input class="radioColor" type="radio" name="pokemon" value="Gengar">
+                    <label for="pokemon">Gengar</label><br>
+                </div>
+                <div class="radioPokemon">
+                    <input class="radioColor" type="radio" name="pokemon" value="Charizard">
+                    <label  for="pokemon">Charizard</label><br>                    
+                </div>
+                <div class="radioPokemon">
+                    <input class="radioColor" type="radio" name="pokemon" value="Lapras">
+                    <label for="pokemon">Lapras</label><br>
+                </div>
+            </div>
+            <div id="pokmonDetails" class="col-sm-6">
+                <div class="inputPokemon">
+                    <label for="weight">Pokemon's weight (lbs):</label>
+                    <input type="number" name="weight"><br>
+                </div>
+                <div class="inputPokemon">
+                    <label for="allergy">Pokemon's Allergies</label>
+                    <select name="allergy">
+                        <option value="none">None</option>
+                        <option value="Nuts">Nuts</option>
+                        <option value="Berries">Berries</option>
+                        <option value="Eggs">Eggs</option>
+                        <option value="Gluten">Gluten</option>
+                        <option value="Milk">Milk</option>
+                    </select>
+                </div>
+                <div class="inputPokemon">
+                    <label for="food">Favorite Food:</label>
+                    <input type="text" name="food"><br>
+                </div>
+                <div class="inputPokemon">
+                    <label for="nickname">Nickname:</label>
+                    <input type="text" name="nickname"><br><br>
+                </div>
+            </div>
+            <button id="BuddyFormSubmit" name="submit" value="clicked" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
