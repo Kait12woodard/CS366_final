@@ -177,6 +177,7 @@ button:hover
   background-color: rgb(40, 140, 227);
 }
 
+
 /*Buddy Summary page styling*/
 
 #PokemonType
@@ -284,6 +285,20 @@ ul
   align-items: center;
 }
 
+.validation-summary-errors ul
+{
+  text-align: left;
+  background-color: white;
+  color: rgb(201, 12, 12);
+  border: 10px solid rgb(201, 12, 12) !important;
+}
+
+.validation-summary-valid ul
+{
+  border: none;
+  background-color: rgb(111, 5, 5);
+}
+
 .dropdown
 {
   position: relative;
@@ -300,11 +315,6 @@ ul
 #submitAddPlannerButton
 {
   padding: 30px;
-}
-
-.linkLeveler
-{
-  padding: 12px;
 }
 
 .radioMealButton
@@ -335,6 +345,7 @@ ul
   padding: 30px;
 }
 
+/*Weekly Planner*/
 table
 {
   background-color: rgb(235, 158, 171);
@@ -368,3 +379,9 @@ td
   align-items: center;
   display: flex;
 }
+
+.linkLeveler
+{
+  padding: 12px;
+}
+

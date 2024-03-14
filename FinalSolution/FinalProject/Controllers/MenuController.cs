@@ -12,6 +12,8 @@ public class MenuController : Controller
         return View();
     }
 
+    //delete holds which meal of the day (first number) and which day of the week (second number) to figure out which entry to delete
+    //ex: 20 = Dinner for Monday
     [HttpPost]
     public IActionResult MenuPlanner(int delete)
     {
@@ -119,94 +121,100 @@ public class MenuController : Controller
     [HttpPost]
     public IActionResult AddToPlanner(HelperMeal meal)
     {
-        Day day = new Day();
-        if(meal.MealCode == 0)
+        if(ModelState.IsValid)
         {
-            day.Breakfast = meal.NewMeal;
-            switch(meal.DayCode)
+            Day day = new Day();
+            if(meal.MealCode == 0)
             {
-                case 0:
-                    Repository.Week.Monday.Breakfast = day.Breakfast;
-                    break;
-                case 1:
-                    Repository.Week.Tuesday.Breakfast = day.Breakfast;
-                    break;
-                case 2:
-                    Repository.Week.Wednesday.Breakfast = day.Breakfast;
-                    break;
-                case 3:
-                    Repository.Week.Thursday.Breakfast = day.Breakfast;
-                    break;
-                case 4:
-                    Repository.Week.Friday.Breakfast = day.Breakfast;
-                    break;
-                case 5:
-                    Repository.Week.Saturday.Breakfast = day.Breakfast;
-                    break;
-                case 6:
-                    Repository.Week.Sunday.Breakfast = day.Breakfast;
-                    break;
+                day.Breakfast = meal.NewMeal;
+                switch(meal.DayCode)
+                {
+                    case 0:
+                        Repository.Week.Monday.Breakfast = day.Breakfast;
+                        break;
+                    case 1:
+                        Repository.Week.Tuesday.Breakfast = day.Breakfast;
+                        break;
+                    case 2:
+                        Repository.Week.Wednesday.Breakfast = day.Breakfast;
+                        break;
+                    case 3:
+                        Repository.Week.Thursday.Breakfast = day.Breakfast;
+                        break;
+                    case 4:
+                        Repository.Week.Friday.Breakfast = day.Breakfast;
+                        break;
+                    case 5:
+                        Repository.Week.Saturday.Breakfast = day.Breakfast;
+                        break;
+                    case 6:
+                        Repository.Week.Sunday.Breakfast = day.Breakfast;
+                        break;
+                }
             }
+            else if(meal.MealCode == 1)
+            {
+                day.Lunch = meal.NewMeal;
+                switch(meal.DayCode)
+                {
+                    case 0:
+                        Repository.Week.Monday.Lunch = day.Lunch;
+                        break;
+                    case 1:
+                        Repository.Week.Tuesday.Lunch = day.Lunch;
+                        break;
+                    case 2:
+                        Repository.Week.Wednesday.Lunch = day.Lunch;
+                        break;
+                    case 3:
+                        Repository.Week.Thursday.Lunch = day.Lunch;
+                        break;
+                    case 4:
+                        Repository.Week.Friday.Lunch = day.Lunch;
+                        break;
+                    case 5:
+                        Repository.Week.Saturday.Lunch = day.Lunch;
+                        break;
+                    case 6:
+                        Repository.Week.Sunday.Lunch= day.Lunch;
+                        break;
+                }
+            }
+            else if(meal.MealCode == 2)
+            {
+                day.Dinner = meal.NewMeal;
+                switch(meal.DayCode)
+                {
+                    case 0:
+                        Repository.Week.Monday.Dinner = day.Dinner;
+                        break;
+                    case 1:
+                        Repository.Week.Tuesday.Dinner = day.Dinner;
+                        break;
+                    case 2:
+                        Repository.Week.Wednesday.Dinner = day.Dinner;
+                        break;
+                    case 3:
+                        Repository.Week.Thursday.Dinner = day.Dinner;
+                        break;
+                    case 4:
+                        Repository.Week.Friday.Dinner = day.Dinner;
+                        break;
+                    case 5:
+                        Repository.Week.Saturday.Dinner = day.Dinner;
+                        break;
+                    case 6:
+                        Repository.Week.Sunday.Dinner = day.Dinner;
+                        break;
+                }
+            }
+            return View("MenuPlanner", Repository.Week);
         }
-        else if(meal.MealCode == 1)
+        else
         {
-            day.Lunch = meal.NewMeal;
-            switch(meal.DayCode)
-            {
-                case 0:
-                    Repository.Week.Monday.Lunch = day.Lunch;
-                    break;
-                case 1:
-                    Repository.Week.Tuesday.Lunch = day.Lunch;
-                    break;
-                case 2:
-                    Repository.Week.Wednesday.Lunch = day.Lunch;
-                    break;
-                case 3:
-                    Repository.Week.Thursday.Lunch = day.Lunch;
-                    break;
-                case 4:
-                    Repository.Week.Friday.Lunch = day.Lunch;
-                    break;
-                case 5:
-                    Repository.Week.Saturday.Lunch = day.Lunch;
-                    break;
-                case 6:
-                    Repository.Week.Sunday.Lunch= day.Lunch;
-                    break;
-            }
-        }
-        else if(meal.MealCode == 2)
-        {
-            day.Dinner = meal.NewMeal;
-            switch(meal.DayCode)
-            {
-                case 0:
-                    Repository.Week.Monday.Dinner = day.Dinner;
-                    break;
-                case 1:
-                    Repository.Week.Tuesday.Dinner = day.Dinner;
-                    break;
-                case 2:
-                    Repository.Week.Wednesday.Dinner = day.Dinner;
-                    break;
-                case 3:
-                    Repository.Week.Thursday.Dinner = day.Dinner;
-                    break;
-                case 4:
-                    Repository.Week.Friday.Dinner = day.Dinner;
-                    break;
-                case 5:
-                    Repository.Week.Saturday.Dinner = day.Dinner;
-                    break;
-                case 6:
-                    Repository.Week.Sunday.Dinner = day.Dinner;
-                    break;
-            }
+            return View();
         }
         
-
-        return View("MenuPlanner", Repository.Week);
     }
 
 }

@@ -10,6 +10,7 @@
 
 <div class="container-fluid text-center">
     <form asp-controller="Menu" asp-action="AddToPlanner" method="post">
+        <div asp-validation-summary="All"></div>
         <div class="container-fluid formQuestionBox">
             <h4>What day?</h4>
             <div class="simpleQuestions">
@@ -28,7 +29,7 @@
         <div class="container-fluid formQuestionBox">
             <h4>Which Meal?</h4>
             <div class="radioMealButton">
-                <input type="radio" value="0" id="breakfast" asp-for="MealCode">
+                <input type="radio" value="0" id="breakfast" checked asp-for="MealCode">
                 <label class="questionLabel" asp-for="MealCode">Breakfast</label><br>
             </div>
             <div class="radioMealButton">
