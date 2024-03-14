@@ -34,6 +34,16 @@ h1
   margin-bottom: 30px;
 }
 
+h2
+{
+  color: rgb(201, 12, 12);
+  background-color: white;
+  border: 10px solid rgb(40, 140, 227);
+  font-weight: 800;
+  margin-top: 30px;
+  padding: 15px;
+}
+
 h4
 {
   font-weight: bold;
@@ -41,6 +51,7 @@ h4
   background-color: rgb(201, 12, 12);
   color: white;
   border: 2px solid black;
+  border-radius: 20px;
 }
 
 button 
@@ -56,7 +67,7 @@ button
 
 button:hover
 {
-  background-color: rgb(5, 103, 152);
+  background-color: rgb(40, 140, 227);
 }
 
 /*Home Page Styling*/
@@ -91,7 +102,7 @@ button:hover
 
 #PokemonBuddyLink:hover, #MenuPlannerLink:hover
 {
-  background-color: rgb(5, 103, 152);
+  background-color: rgb(40, 140, 227);
 }
 
 #snorlaxAnimation
@@ -129,15 +140,11 @@ button:hover
   padding: 5px;
 }
 
-.radioPokemon input[type="radio"]
-{
-  height: 1em;
-  width: 1em;
-}
-
 .radioPokemon input[type=radio]
 {
   accent-color: red;
+  height: 1em;
+  width: 1em;
 }
 
 
@@ -167,7 +174,7 @@ button:hover
 
 #BuddyFormSubmit:hover
 {
-  background-color: rgb(5, 103, 152);
+  background-color: rgb(40, 140, 227);
 }
 
 /*Buddy Summary page styling*/
@@ -242,4 +249,122 @@ ul
 .ListButtons
 {
   text-align: center;
+}
+
+/*Meal Panner Page Styling*/
+#addMealLink 
+{
+  text-decoration: none;
+  margin-top: 30px;
+  background-color: rgb(201, 12, 12);
+  border: 2px solid black;
+  border-radius: 20px;
+  color: white;
+  padding: 12px 30px;
+  font-size: 18px;
+}
+
+#addMealLink:hover
+{
+  background-color: rgb(40, 140, 227);
+}
+
+
+/*AddToPlanner Page Styling*/
+.formQuestionBox
+{
+  margin: auto;
+  margin-top: 40px;
+  background-color: rgb(238, 206, 27);
+  border: 6px solid rgb(40, 140, 227);
+  border-radius: 15px;
+  padding: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  align-items: center;
+}
+
+.dropdown
+{
+  position: relative;
+  display: inline-block;
+  background-color: white;
+  padding: 10px;
+  color: black;
+  font-weight: 600;
+  border: 6px solid rgb(40, 140, 227);
+  border-radius: 30px;
+  text-align: center;
+}
+
+#submitAddPlannerButton
+{
+  padding: 30px;
+}
+
+.linkLeveler
+{
+  padding: 12px;
+}
+
+.radioMealButton
+{
+  font-size: 18px;
+  padding: 10px;
+}
+.radioMealButton input[type=radio]
+{
+  accent-color: rgb(40, 140, 227);
+  height: 1em;
+  width: 1em;
+}
+
+.textbox
+{
+  border-radius: 25px;
+  border: 6px solid rgb(40, 140, 227);
+}
+
+.questionLabel
+{
+  color: rgb(40, 140, 227)
+}
+
+.simpleQuestions
+{
+  padding: 30px;
+}
+
+table
+{
+  background-color: rgb(235, 158, 171);
+  min-width: 100px;
+  border: 10px solid rgb(201, 12, 12);
+}
+
+th,td
+{
+  text-align: center;
+  padding: 10px 30px;
+}
+
+th
+{
+  font-weight: 900;
+  font-size: 25px;
+}
+
+td
+{
+  font-weight: 700;
+  font-size: 20px;
+}
+
+#weekDisplayBox
+{
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  align-items: center;
+  display: flex;
 }
