@@ -6,10 +6,31 @@ public class BuddyController : Controller
 {
 
     [HttpGet]
-    public IActionResult BuddyForm(string? pokemon, double? weight, string? allergy, string? food, string? nickname)
+    public IActionResult BuddyForm(string? pokemon, double? weight, string? allergy, string? food, string? nickname,string submit)
     {
-        if(pokemon != null && weight != null && food != null && nickname != null)
+        if(submit != null)
         {
+            ViewData["ErrorMessage"]= null;
+            if(pokemon == null)
+            {
+                ViewData["ErrorMessage"]= "Please select a Pokemon Buddy";
+                return View();
+            }
+            else if(weight == null || weight > 1000 || weight < 1)
+            {
+                ViewData["ErrorMessage"]= "Please enter a valid Weight between 1 and 1000";
+                return View();
+            }
+            else if(food == null || food.Length < 2 || food.Length > 100)
+            {
+                ViewData["ErrorMessage"]= "Please enter a valid Favorite Food.(Between 2 and 100 characters long)";
+                return View();
+            }
+            else if(nickname == null || nickname.Length < 2 || nickname.Length > 100)
+            {
+                ViewData["ErrorMessage"]= "Please enter a valid Nickname.(Between 2 and 100 characters long)";
+                return View();
+            }
             List<string> summary = new List<string>();
             summary.Add(pokemon);
             string stringWeight = weight.ToString();
@@ -83,12 +104,14 @@ public class BuddyController : Controller
                     summary.Add("Regular");
                 }
             }
+            allergy = allergy.ToUpper();
             summary.Add(allergy);
             summary.Add(food);
             summary.Add(nickname);
 
             return View("Summary", summary);
         }
-    return View();
+
+    return View("BuddyForm");
     }
 }

@@ -4,6 +4,10 @@
 
 <div class="container-fluid text-center">
     <h1>Pick Your Pokemon Buddy</h1>
+    @if(ViewData["ErrorMessage"] != null)
+    {
+        <div id="ErrorMessage">@ViewData["ErrorMessage"]</div>
+    }
 </div>
 
 <div id="pokemonFormColumns" class="container-fluid">
@@ -56,7 +60,7 @@
                     <input type="text" name="nickname"><br><br>
                 </div>
             </div>
-            <button id="BuddyFormSubmit" onclick="validate(pokemon, weight, food, nickname)" type="submit">Submit</button>
+            <button id="BuddyFormSubmit" name="submit" value="clicked" type="submit">Submit</button>
         </form>
     </div>
 </div>

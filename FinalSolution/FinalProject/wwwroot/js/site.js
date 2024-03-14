@@ -5,38 +5,6 @@ $(document).ready(function(){
     })
 });
 
-//Validates Buddy Form Inputs Client side
-function validate(pokemon, weight, food, nickname)
-{
-    var error= "";
-    
-    var isChecked = Array.from(pokemon).some(box => box.checked)
-    if(isChecked === false)
-    {
-        error= "Please select a pokemon"
-        alert(error);
-        return false;
-    }
-    if(weight.value > 1000 || weight.value < 1)
-    {
-        error="Please enter a valid weight between 1 to 1000";
-        alert(error);
-        return false;
-    }
-    if(food.value.length < 2 || food.value.length > 100)
-    {
-        error="Please enter a valid Favorite Food between 2-100 characters long";
-        alert(error);
-        return false;
-    }
-    if(nickname.value.length < 2 || nickname.value.length > 100)
-    {
-        error="Please enter a valid Nickname between 2-100 characters long";
-        alert(error);
-        return false;
-    }
-}
-
 $("#Convert_lbs").hide();
 $("#avoidFood").hide();
 
