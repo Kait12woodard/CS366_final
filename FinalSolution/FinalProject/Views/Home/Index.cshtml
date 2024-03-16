@@ -33,6 +33,7 @@
 <div class="container-fluid text-center">
     <br><br>
     <div class="row">
+        <!--These are extra navigation links to the main two features-->
         <div class="col-sm-6">
             <a asp-controller="Buddy" asp-action="BuddyForm" id="PokemonBuddyLink">Pick a Pokemon Buddy!</a>
         </div>
@@ -42,8 +43,10 @@
     </div>
     <br><br>
 </div>
-
-<div id="snorlaxAnimation" class="container-fluid text-center">
+<!--Uses JQuery to interact with the photo-->
+<div class="container-fluid text-center">
     <h4>Poke the Snorlax to Wake him</h4>
+</div>
+<div id="snorlaxAnimation" class="container-fluid text-center">
     <img id="snorlax" src="/Images/SnorlaxSleep.png" alt="Snorlax Sleeping">
 </div>

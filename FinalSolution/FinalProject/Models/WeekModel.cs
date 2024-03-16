@@ -1,4 +1,5 @@
 namespace FinalProject.Models {
+    //C# properties
     public class Week {
         public Day Monday {get; set;}
         public Day Tuesday {get; set;}

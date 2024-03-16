@@ -1,17 +1,16 @@
 ﻿/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
-
+/*Navbar styling*/
 .navbar .navbar-nav
 {
-  background-color: rgb(201, 12, 12);
-  border: 6px solid rgb(238, 206, 27);
+  background-color: rgb(238, 206, 27);
+  border: 6px solid rgb(201, 12, 12);
 }
 
 .nav-item
 {
   padding: 5px 30px;
   font-size: 30px;
-  color: rgb(238, 206, 27) !important;
   font-weight: 700;
   align-items: left;
   margin: auto;
@@ -21,7 +20,7 @@ for details on configuring this project to bundle and minify static web assets. 
 
 .nav-item:hover
 {
-  background-color: rgb(238, 206, 27);
+  background-color: white;
   max-width: auto;
 }
 

@@ -8,24 +8,54 @@
 </div>
 <div class="container-fluid">
     <div id="SummaryColumns" class="row">
+        <!--JQuery was used to select what photo to show based on what weight and pokemon was
+        selected from the form-->
         <div class="col-sm-8">
             <h3 id="PokemonType">@Model[0]</h3>
             <div id="PokemonImage"></div>
         </div>
+        <!--JQuery was used to convert pounds to kilgrams and back-->
         <div id="SummaryDetails" class="col-sm-4">
-            <div><span style="font-size: 30px; text-decoration: underline">Nickname:</span> @Model[5]</div><br>
             <div id="Health"><span style="font-size: 30px; text-decoration: underline">Health Status:</span> @Model[2]</div><br>
-            <div><span style="font-size: 30px; text-decoration: underline">Allergies:</span> @Model[3]</div><br>
+            <div><span style="font-size: 30px; text-decoration: underline">Allergies:</span> @Model[4]</div><br>
             <div id="WeightLabel">Pounds</div>
             <div id="Weight_to_convert">@Model[1]</div>
             <button id="Convert_kilo">Convert to Kilograms</button>
             <button id="Convert_lbs">Convert to Pounds</button>
         </div>
     </div>
+    <div class="row container-fluid">
+        <div id="HealthDescription">
+            <p>@Model[6] is a @Model[0]. @Model[3]</p>
+            @if(Model[2] == "Overweight")
+            {
+                <p>Your @Model[0] seems to be a bit overweight. Try taking @Model[6]
+                    out on more walks and feeding them more nutritious foods like fruits
+                    and vegatbles or the foods recommended below.
+                </p>
+            }
+            @if(Model[2] == "Underweight")
+            {
+                <p>Your @Model[0] seems to be a bit underweight. Try feeding @Model[6] more
+                    foods higher in protein and other nutritious foods like recommended below.
+                    Once they have more energy make sure to keep your Pokemon Buddy active.
+                </p>
+            }
+            @if(Model[2] == "Regular")
+            {
+                <p>Your @Model[0] is at a healthy weight. Make sure to keep @Model[6] active and
+                    eating healthy to make sure it lives a happy and long life.
+                </p>
+            }
+        </div><br>
+    </div>
     <div class="row">
+        <!--Based on selections from the form, JQuery will offer more information about 
+        the pokemon buddy by pressing the buttons below. These are two dynamically made lists
+        using JQuery-->
         <div class="col-sm-6">
             <h4 class="ListTitle">Recommended Food:</h4>
-            <ul id="recFood">@Model[4]<br>
+            <ul id="recFood">@Model[5]<br>
             </ul>
             <div class="ListButtons">
                 <button id="RecommendButton">Learn Recommended Food</button>
