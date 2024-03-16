@@ -4,6 +4,10 @@ namespace FinalProject.Controllers;
 
 public class BuddyController : Controller 
 {
+    //This is my big Get Method. It verifies the information given, based on your answers
+    //it will determine if your health status of your pokemon and add a summary about it into
+    //the string, uppercase the allergies
+
 
     [HttpGet]
     public IActionResult BuddyForm(string? pokemon, double? weight, string? allergy, string? food, string? nickname,string submit)
@@ -47,6 +51,7 @@ public class BuddyController : Controller
                 {
                     summary.Add("Regular");
                 }
+                summary.Add("Healthy weight for a Mimikyu is between 1-4 pounds");
             }
             else if(pokemon == "Eevee")
             {
@@ -61,6 +66,7 @@ public class BuddyController : Controller
                 {
                     summary.Add("Regular");
                 }
+                summary.Add("Healthy weight for a Eevee is between 8-20 pounds");
             }
             else if(pokemon == "Gengar")
             {
@@ -75,6 +81,7 @@ public class BuddyController : Controller
                 {
                     summary.Add("Regular");
                 }
+                summary.Add("Healthy weight for a Gengar is between 70-100 pounds");
             }
             else if(pokemon == "Charizard")
             {
@@ -89,6 +96,7 @@ public class BuddyController : Controller
                 {
                     summary.Add("Regular");
                 }
+                summary.Add("Healthy weight for a Charizard is between 170-230 pounds");
             }
             else
             {
@@ -103,6 +111,7 @@ public class BuddyController : Controller
                 {
                     summary.Add("Regular");
                 }
+                summary.Add("Healthy weight for a Lapras is between 420-550 pounds");
             }
             allergy = allergy.ToUpper();
             summary.Add(allergy);

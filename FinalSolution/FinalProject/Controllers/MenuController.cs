@@ -12,6 +12,8 @@ public class MenuController : Controller
         return View();
     }
 
+    //Another Post method for clearing and deleting individual lines of the meal planner
+
     //delete holds which meal of the day (first number) and which day of the week (second number) to figure out which entry to delete
     //ex: 20 = Dinner for Monday
     [HttpPost]
@@ -116,6 +118,9 @@ public class MenuController : Controller
     {
         return View();
     }
+
+    //Post Method is used organize form information to properly store and then display
+    //meal information on the MenuPlanner
 
 
     [HttpPost]

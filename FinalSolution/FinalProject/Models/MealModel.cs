@@ -1,6 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 
 namespace FinalProject.Models {
+    //C# properties
     public class Meal {
         [Required(ErrorMessage = "Name the planned meal")]
         [StringLength(100, MinimumLength =2)]
