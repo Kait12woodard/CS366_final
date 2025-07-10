@@ -1,34 +1,39 @@
 ﻿//Home page Snorlax Animation
-$(document).ready(function(){
-    $("#snorlax").click(function(){
+$(() => {
+    $("#snorlax").click(function () {
         $(this).attr("src", "/Images/SnorlaxWave.png");
-    })
+    });
 });
 
 $("#Convert_lbs").hide();
 $("#avoidFood").hide();
 
-document.getElementById("Convert_kilo").addEventListener("click", function() {
-    const stringWeight = document.getElementById("Weight_to_convert");
-    const blsWeight = parseFloat(stringWeight.innerText);
-    const kiloWeight = blsWeight * 0.453592;
-    stringWeight.innerText = kiloWeight.toFixed(2);
-    const label = document.getElementById("WeightLabel");
-    label.innerText = "Kilograms"
-    $("#Convert_kilo").hide();
-    $("#Convert_lbs").show();
-});
+$(() => {
+    if (document.getElementById("Convert_kilo")) {
+        $("#Convert_lbs").hide();
+        document.getElementById("Convert_kilo").addEventListener("click", function () {
+            const stringWeight = document.getElementById("Weight_to_convert");
+            const blsWeight = parseFloat(stringWeight.innerText);
+            const kiloWeight = blsWeight * 0.453592;
+            stringWeight.innerText = kiloWeight.toFixed(2);
+            const label = document.getElementById("WeightLabel");
+            label.innerText = "Kilograms"
+            $("#Convert_kilo").hide();
+            $("#Convert_lbs").show();
+        });
 
-document.getElementById("Convert_lbs").addEventListener("click", function() {
-    const stringWeight = document.getElementById("Weight_to_convert");
-    const blsWeight = parseFloat(stringWeight.innerText);
-    const kiloWeight = blsWeight * 2.2046;
-    stringWeight.innerText = kiloWeight.toFixed(2);
-    const label = document.getElementById("WeightLabel");
-    label.innerText = "Pounds"
-    $("#Convert_lbs").hide();
-    $("#Convert_kilo").show();
-});
+        document.getElementById("Convert_lbs").addEventListener("click", function () {
+            const stringWeight = document.getElementById("Weight_to_convert");
+            const blsWeight = parseFloat(stringWeight.innerText);
+            const kiloWeight = blsWeight * 2.2046;
+            stringWeight.innerText = kiloWeight.toFixed(2);
+            const label = document.getElementById("WeightLabel");
+            label.innerText = "Pounds"
+            $("#Convert_lbs").hide();
+            $("#Convert_kilo").show();
+        });
+    }
+});  
 
 //Based on Pokemon displays recommended food and foods to avoid
 $(document).ready(function() {
